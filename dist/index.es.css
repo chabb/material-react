@@ -1,0 +1,1141 @@
+@import '../src/assets/styles.css';
+@import '../src/components/search/SearchUI/SearchUI.css';
+@import '../src/components/search/Select/Select.css';
+@import '../src/components/search/MaterialsInput/MaterialsInput.css';
+@import '../src/components/periodic-table/PeriodicTableFormulaButtons/PeriodicTableFormulaButtons.css';
+@import '../src/components/search/DualRangeSlider/DualRangeSlider.css';
+@import '../src/components/periodic-table/PeriodicTableModeSwitcher/PeriodicTableModeSwitcher.css';
+div.vis-configuration {
+  position: relative;
+  display: block;
+  float: left;
+  font-size: 12px;
+}
+div.vis-configuration-wrapper {
+  display: block;
+  width: 700px;
+}
+div.vis-configuration-wrapper::after {
+  clear: both;
+  content: '';
+  display: block;
+}
+div.vis-configuration.vis-config-option-container {
+  display: block;
+  width: 495px;
+  background-color: #ffffff;
+  border: 2px solid #f7f8fa;
+  border-radius: 4px;
+  margin-top: 20px;
+  left: 10px;
+  padding-left: 5px;
+}
+div.vis-configuration.vis-config-button {
+  display: block;
+  width: 495px;
+  height: 25px;
+  vertical-align: middle;
+  line-height: 25px;
+  background-color: #f7f8fa;
+  border: 2px solid #ceced0;
+  border-radius: 4px;
+  margin-top: 20px;
+  left: 10px;
+  padding-left: 5px;
+  cursor: pointer;
+  margin-bottom: 30px;
+}
+div.vis-configuration.vis-config-button.hover {
+  background-color: #4588e6;
+  border: 2px solid #214373;
+  color: #ffffff;
+}
+div.vis-configuration.vis-config-item {
+  display: block;
+  float: left;
+  width: 495px;
+  height: 25px;
+  vertical-align: middle;
+  line-height: 25px;
+}
+div.vis-configuration.vis-config-item.vis-config-s2 {
+  left: 10px;
+  background-color: #f7f8fa;
+  padding-left: 5px;
+  border-radius: 3px;
+}
+div.vis-configuration.vis-config-item.vis-config-s3 {
+  left: 20px;
+  background-color: #e4e9f0;
+  padding-left: 5px;
+  border-radius: 3px;
+}
+div.vis-configuration.vis-config-item.vis-config-s4 {
+  left: 30px;
+  background-color: #cfd8e6;
+  padding-left: 5px;
+  border-radius: 3px;
+}
+div.vis-configuration.vis-config-header {
+  font-size: 18px;
+  font-weight: bold;
+}
+div.vis-configuration.vis-config-label {
+  width: 120px;
+  height: 25px;
+  line-height: 25px;
+}
+div.vis-configuration.vis-config-label.vis-config-s3 {
+  width: 110px;
+}
+div.vis-configuration.vis-config-label.vis-config-s4 {
+  width: 100px;
+}
+div.vis-configuration.vis-config-colorBlock {
+  top: 1px;
+  width: 30px;
+  height: 19px;
+  border: 1px solid #444444;
+  border-radius: 2px;
+  padding: 0px;
+  margin: 0px;
+  cursor: pointer;
+}
+input.vis-configuration.vis-config-checkbox {
+  left: -5px;
+}
+input.vis-configuration.vis-config-rangeinput {
+  position: relative;
+  top: -5px;
+  width: 60px;
+  /*height:13px;*/
+  padding: 1px;
+  margin: 0;
+  pointer-events: none;
+}
+input.vis-configuration.vis-config-range {
+  /*removes default webkit styles*/
+  -webkit-appearance: none;
+  /*fix for FF unable to apply focus style bug */
+  border: 0px solid white;
+  background-color: rgba(0, 0, 0, 0);
+  /*required for proper track sizing in FF*/
+  width: 300px;
+  height: 20px;
+}
+input.vis-configuration.vis-config-range::-webkit-slider-runnable-track {
+  width: 300px;
+  height: 5px;
+  background: #dedede;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #dedede 0%, #c8c8c8 99%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #dedede), color-stop(99%, #c8c8c8));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #dedede 0%, #c8c8c8 99%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #dedede 0%, #c8c8c8 99%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #dedede 0%, #c8c8c8 99%);
+  /* IE10+ */
+  background: linear-gradient(to bottom, #dedede 0%, #c8c8c8 99%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#dedede', endColorstr='#c8c8c8', GradientType=0);
+  /* IE6-9 */
+  border: 1px solid #999999;
+  box-shadow: #aaaaaa 0px 0px 3px 0px;
+  border-radius: 3px;
+}
+input.vis-configuration.vis-config-range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  border: 1px solid #14334b;
+  height: 17px;
+  width: 17px;
+  border-radius: 50%;
+  background: #3876c2;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #3876c2 0%, #385380 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #3876c2), color-stop(100%, #385380));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #3876c2 0%, #385380 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #3876c2 0%, #385380 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #3876c2 0%, #385380 100%);
+  /* IE10+ */
+  background: linear-gradient(to bottom, #3876c2 0%, #385380 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#3876c2', endColorstr='#385380', GradientType=0);
+  /* IE6-9 */
+  box-shadow: #111927 0px 0px 1px 0px;
+  margin-top: -7px;
+}
+input.vis-configuration.vis-config-range:focus {
+  outline: none;
+}
+input.vis-configuration.vis-config-range:focus::-webkit-slider-runnable-track {
+  background: #9d9d9d;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #9d9d9d 0%, #c8c8c8 99%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #9d9d9d), color-stop(99%, #c8c8c8));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #9d9d9d 0%, #c8c8c8 99%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #9d9d9d 0%, #c8c8c8 99%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #9d9d9d 0%, #c8c8c8 99%);
+  /* IE10+ */
+  background: linear-gradient(to bottom, #9d9d9d 0%, #c8c8c8 99%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#9d9d9d', endColorstr='#c8c8c8', GradientType=0);
+  /* IE6-9 */
+}
+input.vis-configuration.vis-config-range::-moz-range-track {
+  width: 300px;
+  height: 10px;
+  background: #dedede;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #dedede 0%, #c8c8c8 99%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #dedede), color-stop(99%, #c8c8c8));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #dedede 0%, #c8c8c8 99%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #dedede 0%, #c8c8c8 99%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #dedede 0%, #c8c8c8 99%);
+  /* IE10+ */
+  background: linear-gradient(to bottom, #dedede 0%, #c8c8c8 99%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#dedede', endColorstr='#c8c8c8', GradientType=0);
+  /* IE6-9 */
+  border: 1px solid #999999;
+  box-shadow: #aaaaaa 0px 0px 3px 0px;
+  border-radius: 3px;
+}
+input.vis-configuration.vis-config-range::-moz-range-thumb {
+  border: none;
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  background: #385380;
+}
+/*hide the outline behind the border*/
+input.vis-configuration.vis-config-range:-moz-focusring {
+  outline: 1px solid white;
+  outline-offset: -1px;
+}
+input.vis-configuration.vis-config-range::-ms-track {
+  width: 300px;
+  height: 5px;
+  /*remove bg colour from the track, we'll use ms-fill-lower and ms-fill-upper instead */
+  background: transparent;
+  /*leave room for the larger thumb to overflow with a transparent border */
+  border-color: transparent;
+  border-width: 6px 0;
+  /*remove default tick marks*/
+  color: transparent;
+}
+input.vis-configuration.vis-config-range::-ms-fill-lower {
+  background: #777;
+  border-radius: 10px;
+}
+input.vis-configuration.vis-config-range::-ms-fill-upper {
+  background: #ddd;
+  border-radius: 10px;
+}
+input.vis-configuration.vis-config-range::-ms-thumb {
+  border: none;
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  background: #385380;
+}
+input.vis-configuration.vis-config-range:focus::-ms-fill-lower {
+  background: #888;
+}
+input.vis-configuration.vis-config-range:focus::-ms-fill-upper {
+  background: #ccc;
+}
+.vis-configuration-popup {
+  position: absolute;
+  background: rgba(57, 76, 89, 0.85);
+  border: 2px solid #f2faff;
+  line-height: 30px;
+  height: 30px;
+  width: 150px;
+  text-align: center;
+  color: #ffffff;
+  font-size: 14px;
+  border-radius: 4px;
+  -webkit-transition: opacity 0.3s ease-in-out;
+  -moz-transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
+}
+.vis-configuration-popup:after,
+.vis-configuration-popup:before {
+  left: 100%;
+  top: 50%;
+  border: solid transparent;
+  content: ' ';
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+}
+.vis-configuration-popup:after {
+  border-color: rgba(136, 183, 213, 0);
+  border-left-color: rgba(57, 76, 89, 0.85);
+  border-width: 8px;
+  margin-top: -8px;
+}
+.vis-configuration-popup:before {
+  border-color: rgba(194, 225, 245, 0);
+  border-left-color: #f2faff;
+  border-width: 12px;
+  margin-top: -12px;
+}
+.vis .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* Must be displayed above for example selected Timeline items */
+  z-index: 10;
+}
+.vis-active {
+  box-shadow: 0 0 10px #86d5f8;
+}
+div.vis-network div.vis-manipulation {
+  box-sizing: content-box;
+  border-width: 0;
+  border-bottom: 1px;
+  border-style: solid;
+  border-color: #d6d9d8;
+  background: #ffffff;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #ffffff 0%, #fcfcfc 48%, #fafafa 50%, #fcfcfc 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ffffff), color-stop(48%, #fcfcfc), color-stop(50%, #fafafa), color-stop(100%, #fcfcfc));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #ffffff 0%, #fcfcfc 48%, #fafafa 50%, #fcfcfc 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #ffffff 0%, #fcfcfc 48%, #fafafa 50%, #fcfcfc 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #ffffff 0%, #fcfcfc 48%, #fafafa 50%, #fcfcfc 100%);
+  /* IE10+ */
+  background: linear-gradient(to bottom, #ffffff 0%, #fcfcfc 48%, #fafafa 50%, #fcfcfc 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#fcfcfc', GradientType=0);
+  /* IE6-9 */
+  padding-top: 4px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 28px;
+}
+div.vis-network div.vis-edit-mode {
+  position: absolute;
+  left: 0;
+  top: 5px;
+  height: 30px;
+}
+/* FIXME: shouldn't the vis-close button be a child of the vis-manipulation div? */
+div.vis-network div.vis-close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 30px;
+  height: 30px;
+  background-position: 20px 3px;
+  background-repeat: no-repeat;
+  background-image: url('dist/img/59ddc2b.png');
+  cursor: pointer;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+div.vis-network div.vis-close:hover {
+  opacity: 0.6;
+}
+div.vis-network div.vis-manipulation div.vis-button,
+div.vis-network div.vis-edit-mode div.vis-button {
+  float: left;
+  font-family: verdana;
+  font-size: 12px;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
+  display: inline-block;
+  background-position: 0px 0px;
+  background-repeat: no-repeat;
+  height: 24px;
+  margin-left: 10px;
+  /*vertical-align:middle;*/
+  cursor: pointer;
+  padding: 0px 8px 0px 8px;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+div.vis-network div.vis-manipulation div.vis-button:hover {
+  box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.2);
+}
+div.vis-network div.vis-manipulation div.vis-button:active {
+  box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.5);
+}
+div.vis-network div.vis-manipulation div.vis-button.vis-back {
+  background-image: url('dist/img/9a323871.png');
+}
+div.vis-network div.vis-manipulation div.vis-button.vis-none:hover {
+  box-shadow: 1px 1px 8px rgba(0, 0, 0, 0);
+  cursor: default;
+}
+div.vis-network div.vis-manipulation div.vis-button.vis-none:active {
+  box-shadow: 1px 1px 8px rgba(0, 0, 0, 0);
+}
+div.vis-network div.vis-manipulation div.vis-button.vis-none {
+  padding: 0;
+}
+div.vis-network div.vis-manipulation div.notification {
+  margin: 2px;
+  font-weight: bold;
+}
+div.vis-network div.vis-manipulation div.vis-button.vis-add {
+  background-image: url('dist/img/19551063.png');
+}
+div.vis-network div.vis-manipulation div.vis-button.vis-edit,
+div.vis-network div.vis-edit-mode div.vis-button.vis-edit {
+  background-image: url('dist/img/930b0628.png');
+}
+div.vis-network div.vis-edit-mode div.vis-button.vis-edit.vis-edit-mode {
+  background-color: #fcfcfc;
+  border: 1px solid #cccccc;
+}
+div.vis-network div.vis-manipulation div.vis-button.vis-connect {
+  background-image: url('dist/img/3d5dd027.png');
+}
+div.vis-network div.vis-manipulation div.vis-button.vis-delete {
+  background-image: url('dist/img/89d7b051.png');
+}
+/* top right bottom left */
+div.vis-network div.vis-manipulation div.vis-label,
+div.vis-network div.vis-edit-mode div.vis-label {
+  margin: 0 0 0 23px;
+  line-height: 25px;
+}
+div.vis-network div.vis-manipulation div.vis-separator-line {
+  float: left;
+  display: inline-block;
+  width: 1px;
+  height: 21px;
+  background-color: #bdbdbd;
+  margin: 0px 7px 0 15px;
+  /*top right bottom left*/
+}
+/* TODO: is this redundant?
+div.network-navigation_wrapper {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+*/
+div.vis-color-picker {
+  position: absolute;
+  top: 0px;
+  left: 30px;
+  margin-top: -140px;
+  margin-left: 30px;
+  width: 310px;
+  height: 444px;
+  z-index: 1;
+  padding: 10px;
+  border-radius: 15px;
+  background-color: #ffffff;
+  display: none;
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 10px 0px;
+}
+div.vis-color-picker div.vis-arrow {
+  position: absolute;
+  top: 147px;
+  left: 5px;
+}
+div.vis-color-picker div.vis-arrow::after,
+div.vis-color-picker div.vis-arrow::before {
+  right: 100%;
+  top: 50%;
+  border: solid transparent;
+  content: ' ';
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+}
+div.vis-color-picker div.vis-arrow:after {
+  border-color: rgba(255, 255, 255, 0);
+  border-right-color: #ffffff;
+  border-width: 30px;
+  margin-top: -30px;
+}
+div.vis-color-picker div.vis-color {
+  position: absolute;
+  width: 289px;
+  height: 289px;
+  cursor: pointer;
+}
+div.vis-color-picker div.vis-brightness {
+  position: absolute;
+  top: 313px;
+}
+div.vis-color-picker div.vis-opacity {
+  position: absolute;
+  top: 350px;
+}
+div.vis-color-picker div.vis-selector {
+  position: absolute;
+  top: 137px;
+  left: 137px;
+  width: 15px;
+  height: 15px;
+  border-radius: 15px;
+  border: 1px solid #ffffff;
+  background: #4c4c4c;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #4c4c4c 0%, #595959 12%, #666666 25%, #474747 39%, #2c2c2c 50%, #000000 51%, #111111 60%, #2b2b2b 76%, #1c1c1c 91%, #131313 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #4c4c4c), color-stop(12%, #595959), color-stop(25%, #666666), color-stop(39%, #474747), color-stop(50%, #2c2c2c), color-stop(51%, #000000), color-stop(60%, #111111), color-stop(76%, #2b2b2b), color-stop(91%, #1c1c1c), color-stop(100%, #131313));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #4c4c4c 0%, #595959 12%, #666666 25%, #474747 39%, #2c2c2c 50%, #000000 51%, #111111 60%, #2b2b2b 76%, #1c1c1c 91%, #131313 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #4c4c4c 0%, #595959 12%, #666666 25%, #474747 39%, #2c2c2c 50%, #000000 51%, #111111 60%, #2b2b2b 76%, #1c1c1c 91%, #131313 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #4c4c4c 0%, #595959 12%, #666666 25%, #474747 39%, #2c2c2c 50%, #000000 51%, #111111 60%, #2b2b2b 76%, #1c1c1c 91%, #131313 100%);
+  /* IE10+ */
+  background: linear-gradient(to bottom, #4c4c4c 0%, #595959 12%, #666666 25%, #474747 39%, #2c2c2c 50%, #000000 51%, #111111 60%, #2b2b2b 76%, #1c1c1c 91%, #131313 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#4c4c4c', endColorstr='#131313', GradientType=0);
+  /* IE6-9 */
+}
+div.vis-color-picker div.vis-new-color {
+  position: absolute;
+  width: 140px;
+  height: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  top: 380px;
+  left: 159px;
+  text-align: right;
+  padding-right: 2px;
+  font-size: 10px;
+  color: rgba(0, 0, 0, 0.4);
+  vertical-align: middle;
+  line-height: 20px;
+}
+div.vis-color-picker div.vis-initial-color {
+  position: absolute;
+  width: 140px;
+  height: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  top: 380px;
+  left: 10px;
+  text-align: left;
+  padding-left: 2px;
+  font-size: 10px;
+  color: rgba(0, 0, 0, 0.4);
+  vertical-align: middle;
+  line-height: 20px;
+}
+div.vis-color-picker div.vis-label {
+  position: absolute;
+  width: 300px;
+  left: 10px;
+}
+div.vis-color-picker div.vis-label.vis-brightness {
+  top: 300px;
+}
+div.vis-color-picker div.vis-label.vis-opacity {
+  top: 338px;
+}
+div.vis-color-picker div.vis-button {
+  position: absolute;
+  width: 68px;
+  height: 25px;
+  border-radius: 10px;
+  vertical-align: middle;
+  text-align: center;
+  line-height: 25px;
+  top: 410px;
+  border: 2px solid #d9d9d9;
+  background-color: #f7f7f7;
+  cursor: pointer;
+}
+div.vis-color-picker div.vis-button.vis-cancel {
+  /*border:2px solid #ff4e33;*/
+  /*background-color: #ff7761;*/
+  left: 5px;
+}
+div.vis-color-picker div.vis-button.vis-load {
+  /*border:2px solid #a153e6;*/
+  /*background-color: #cb8dff;*/
+  left: 82px;
+}
+div.vis-color-picker div.vis-button.vis-apply {
+  /*border:2px solid #4588e6;*/
+  /*background-color: #82b6ff;*/
+  left: 159px;
+}
+div.vis-color-picker div.vis-button.vis-save {
+  /*border:2px solid #45e655;*/
+  /*background-color: #6dff7c;*/
+  left: 236px;
+}
+div.vis-color-picker input.vis-range {
+  width: 290px;
+  height: 20px;
+}
+/* TODO: is this redundant?
+div.vis-color-picker input.vis-range-brightness {
+  width: 289px !important;
+}
+
+
+div.vis-color-picker input.vis-saturation-range {
+  width: 289px !important;
+}*/
+div.vis-tooltip {
+  position: absolute;
+  visibility: hidden;
+  padding: 5px;
+  white-space: nowrap;
+  font-family: verdana;
+  font-size: 14px;
+  color: #000000;
+  background-color: #f5f4ed;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  border: 1px solid #808074;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+  pointer-events: none;
+  z-index: 5;
+}
+div.vis-network div.vis-navigation div.vis-button {
+  width: 34px;
+  height: 34px;
+  -moz-border-radius: 17px;
+  border-radius: 17px;
+  position: absolute;
+  display: inline-block;
+  background-position: 2px 2px;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+div.vis-network div.vis-navigation div.vis-button:hover {
+  box-shadow: 0 0 3px 3px rgba(56, 207, 21, 0.3);
+}
+div.vis-network div.vis-navigation div.vis-button:active {
+  box-shadow: 0 0 1px 3px rgba(56, 207, 21, 0.95);
+}
+div.vis-network div.vis-navigation div.vis-button.vis-up {
+  background-image: url('dist/img/eb91efe0.png');
+  bottom: 50px;
+  left: 55px;
+}
+div.vis-network div.vis-navigation div.vis-button.vis-down {
+  background-image: url('dist/img/7c63daea.png');
+  bottom: 10px;
+  left: 55px;
+}
+div.vis-network div.vis-navigation div.vis-button.vis-left {
+  background-image: url('dist/img/5ebb2c2d.png');
+  bottom: 10px;
+  left: 15px;
+}
+div.vis-network div.vis-navigation div.vis-button.vis-right {
+  background-image: url('dist/img/e627f775.png');
+  bottom: 10px;
+  left: 95px;
+}
+div.vis-network div.vis-navigation div.vis-button.vis-zoomIn {
+  background-image: url('dist/img/8f0448d4.png');
+  bottom: 10px;
+  right: 15px;
+}
+div.vis-network div.vis-navigation div.vis-button.vis-zoomOut {
+  background-image: url('dist/img/16f4ec35.png');
+  bottom: 10px;
+  right: 55px;
+}
+div.vis-network div.vis-navigation div.vis-button.vis-zoomExtends {
+  background-image: url('dist/img/3703c46c.png');
+  bottom: 50px;
+  right: 15px;
+}
+.tooltiptext {
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px;
+}
+.show-pointer {
+  cursor: pointer !important;
+}
+.elevation-1 {
+  box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+}
+.mp-element-wrapper .mat-element {
+  width: 100%;
+  height: 100%;
+}
+.mat-table-filter {
+  display: flex;
+  flex-direction: row;
+  font-family: Helvetica Neue, sans-serif;
+  background-color: #f5f6f8;
+  margin-bottom: 10px;
+  padding: 13px 30px;
+  border: 1px solid #bebbbb;
+}
+.mat-table-filter .left-side {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: 100px;
+}
+.mat-table-filter .right-side {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 0;
+}
+.mat-table-filter .right-side .filter-selector {
+  display: flex;
+  flex-direction: row;
+}
+.mat-table-filter .right-side .filter-selector .filter-group {
+  display: flex;
+  flex-direction: row;
+}
+.mat-table-filter .right-side .filter-selector .filter-group:not(:last-child):after {
+  content: '';
+  display: inline-block;
+  border-left: 1px solid #bebbbb;
+  margin: 8px 0;
+}
+.mat-table-filter .right-side .sub-filter-selector {
+  display: flex;
+  flex-direction: row;
+}
+.mat-table-filter .right-side .current-filter-selector {
+  background-color: transparent;
+  color: #555759;
+  font-size: 14px;
+  font-weight: 400;
+  margin: 10px;
+  line-height: 1;
+  text-align: center;
+  cursor: pointer;
+  padding: 7px 15px;
+  border: 1px solid #555759;
+  border-radius: 4px;
+}
+.mat-table-filter .right-side .current-filter-selector.selected {
+  background-color: #555759;
+  color: #fff;
+}
+.mat-element.hidden {
+  background: rgba(200, 200, 200);
+  pointer-events: none;
+}
+.mat-element.hidden * {
+  display: none;
+}
+.mp-element-wrapper .mat-element.hidden *,
+.table-container .mat-element.hidden * {
+  display: none;
+}
+.mat-element {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  transition: all 100ms ease-in-out;
+  margin: 0;
+  border-radius: 2px;
+  border: 3px solid transparent;
+  cursor: pointer;
+  position: relative;
+  padding: 0;
+  color: inherit;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+}
+.mat-element.disabled {
+  cursor: default;
+  opacity: 0.4;
+}
+.mat-element.enabled {
+  filter: brightness(90%);
+  border: 3px solid rgba(0, 0, 0, 0.25);
+}
+.mat-element:hover {
+  transform: scale(1.075);
+}
+.mat-element:hover:not(.enabled) {
+  filter: brightness(91%);
+}
+.mat-element.active {
+  background: #cbf3f0;
+}
+.mat-element .mat-symbol {
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  font-size: 1.3em;
+  font-weight: 400;
+  position: absolute;
+}
+.mat-element .element {
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 0;
+}
+.mat-element .mat-number {
+  font-size: 0.7em;
+  margin: 5px;
+}
+/* -------------------
+	Elements
+-------------------- */
+.element-metal {
+  background-color: #b2b2b2;
+}
+.element-alkali-metal {
+  background-color: #bad046;
+}
+.element-alkali-earth-metal {
+  background-color: #70ca9f;
+}
+.element-transition-metal {
+  background-color: #88cbfe;
+}
+.element-lanthoid {
+  background-color: #ffeb11;
+}
+.element-actinoid {
+  background-color: #ffbc1e;
+}
+.element-metalloid {
+  background-color: #de6868;
+}
+.element-non-metal {
+  background-color: #8e9fa6;
+}
+.element-halogen {
+  background-color: #c2a158;
+}
+.element-noble-gas {
+  background-color: #9191cd;
+}
+.element-lanthanoid-transitional-metal .mat-symbol,
+.element-actinoid-transitional-metal .mat-symbol {
+  font-size: 0.8em;
+}
+.element-lanthanoid-transitional-metal {
+  background-color: #edd800;
+}
+.element-actinoid-transitional-metal {
+  background-color: #f9af00;
+}
+.compact.table-container .mat-number {
+  display: none;
+}
+.compact.table-container .main-panel .mat-number {
+  font-size: 1em;
+  display: initial;
+}
+.compact.table-container .main-panel .mat-symbol {
+  font-size: 1.5rem;
+}
+.compact.table-container .mat-symbol {
+  font-size: 1rem;
+}
+.compact.table-container .mat-name,
+.compact.table-container .mat-weight {
+  font-size: 0.7rem;
+  font-weight: normal;
+}
+.compact.table-container .mat-side-panel {
+  font-size: 0.7rem;
+}
+.small.table-container .mat-element:not(.detailed) .mat-number,
+.small.table-container .mat-element:not(.detailed) .mat-name {
+  display: none;
+}
+.small.table-container .mat-element:not(.detailed) .mat-symbol {
+  font-size: 0.7rem;
+}
+.small.table-container .mat-element.detailed {
+  overflow: visible;
+}
+.small.table-container .mat-element.detailed .mat-weight,
+.small.table-container .mat-element.detailed .mat-side-panel {
+  display: none;
+}
+.small.table-container .mat-element.detailed .main-panel {
+  width: 100%;
+  font-size: 0.8em;
+  justify-content: center;
+  overflow: visible;
+}
+.small.table-container .mat-element.detailed .mat-number {
+  font-size: 1em;
+  margin: 0;
+}
+.small.table-container .mat-element.detailed .mat-symbol {
+  font-size: 1em;
+}
+.small.table-container .mat-element.detailed .mat-name {
+  font-size: 0.8em;
+  align-self: center;
+}
+.map.table-container .mat-number,
+.map.table-container .detailed,
+.map.table-container .mat-name,
+.map.table-container .mat-symbol {
+  display: none;
+}
+.mat-group .main-panel .mat-symbol {
+  font-size: 2em;
+}
+.mat-element.detailed {
+  display: flex;
+  flex-direction: row;
+}
+.mat-element .main-panel {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 3;
+  flex-shrink: 1;
+  flex-basis: 0;
+}
+.mat-element .main-panel.compact {
+  font-size: 0.5rem;
+}
+.mat-element .main-panel .mat-name {
+  display: flex;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: auto;
+  align-items: flex-end;
+}
+.mat-element .side-panel {
+  font-size: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 0;
+  text-align: right;
+  padding: 5px;
+}
+.sidebar .__react_component_tooltip.show {
+  display: flex;
+  flex-direction: column;
+}
+.sidebar .__react_component_tooltip .sidebar-menu-item {
+  margin: 5px 0;
+}
+.sidebar .__react_component_tooltip.top.place-right:before,
+.sidebar .__react_component_tooltip.top.place-right:after {
+  top: 10%;
+}
+.sidebar .sidebar-menu-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.sidebar .sidebar-menu-item.selected .sidebar-item {
+  border-width: 3px;
+}
+.sidebar.vertical {
+  display: flex;
+  flex-direction: column;
+  height: 500px;
+}
+.sidebar.horizontal {
+  display: flex;
+  flex-direction: row;
+}
+.sidebar.horizontal .content {
+  flex-direction: row;
+  justify-content: space-around;
+}
+.sidebar .content {
+  margin: 10px 0;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 0;
+  justify-content: space-between;
+}
+.sidebar .sidebar-item {
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border: 1px solid black;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  vertical-align: middle;
+}
+.sidebar .sub-app {
+  font-size: 11px;
+}
+.table-legend-container {
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
+}
+.table-legend-container .legend-container {
+  margin-left: 30px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.table-legend-container .legend-container .table-legend {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex-basis: 90%;
+  flex-grow: 0;
+  flex-shrink: 0;
+  border: 1px solid black;
+}
+.table-legend-container .legend-container .table-legend .table-legend-pointer {
+  transition: all 100ms;
+}
+.table-container {
+  display: grid;
+}
+.table-container.spaced {
+  grid-template-columns: repeat(18, 62px);
+  grid-template-rows: repeat(7, 62px) 5px repeat(2, 62px);
+  grid-gap: 6px;
+}
+.table-container.compact {
+  grid-template-columns: repeat(18, 42px);
+  grid-template-rows: repeat(7, 42px) 2px repeat(2, 42px);
+  grid-gap: 4px;
+}
+.table-container.small {
+  grid-template-columns: repeat(18, 25px);
+  grid-template-rows: repeat(7, 25px) 1px repeat(2, 25px);
+  grid-gap: 2px;
+}
+.table-container.map {
+  grid-template-columns: repeat(18, 18px);
+  grid-template-rows: repeat(7, 18px) 1px repeat(2, 18px);
+  grid-gap: 2px;
+}
+.table-container.elements-hidden .mat-element {
+  opacity: 0;
+}
+.table-container .first-span {
+  grid-column: 2 / span 16;
+  grid-row: 1 / span 1;
+  display: flex;
+  flex-direction: row;
+}
+.table-container .first-span .table-switcher {
+  width: 50px;
+  opacity: 0.5;
+  cursor: pointer;
+  background: url('dist/img/1a282498.png') center no-repeat;
+  background-size: contain;
+}
+.table-container .second-span {
+  grid-column: 3 / span 10;
+  grid-row: 2 / span 2;
+}
+.table-container .third-span {
+  grid-column: 13 / span 6;
+  grid-row: 7 / span 1;
+}
+.table-container .separator-span {
+  grid-column: 1 / span 18;
+  grid-row: 8 / span 1;
+}
+.table-container .first-lower-span {
+  grid-column: 1 / span 2;
+  grid-row: 9 / span 2;
+}
+.table-container .second-lower-span {
+  grid-column: 18 / span 1;
+  grid-row: 9 / span 2;
+}
+.table-container .item {
+  border: 1px solid transparent;
+}
+.table-container .element-description {
+  grid-column-start: 3;
+  grid-column-end: 5;
+  grid-row-end: 2;
+  grid-row-start: 4;
+  display: flex;
+  flex-direction: row;
+}
+.table-container .element-description .mat-element {
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 0;
+  overflow: hidden;
+}
+.table-transition-wrapper-spaced {
+  max-height: 617px;
+}
+.table-transition-wrapper-compact {
+  max-height: 416px;
+}
+.table-transition-wrapper-small {
+  max-height: 244px;
+}
+.mat-element.simple.element-lanthanoid-transitional-metal.disabled .mat-symbol,
+.mat-element.simple.element-actinoid-transitional-metal.disabled .mat-symbol {
+  font-size: 0.5rem !important;
+  white-space: nowrap;
+}
+
+/*# sourceMappingURL=index.es.css.map */
